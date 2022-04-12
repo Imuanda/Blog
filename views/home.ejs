@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p> <%= content %> </p>
+
+<% posts.forEach((title)=>{ %>
+<h1><%= title.postTitle %></h1>
+<p>
+  <%= title.postText.slice(0,100)+" ... "%>
+  <a href="/post/<%=title.postTitle%>">Read more</a>
+</p>
+<%});%>
+
+<%- include("partials/footer") -%>
+
+<%# Use .forEach to loop through an array %>
